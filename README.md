@@ -14,12 +14,17 @@ This Python program demonstrates the integration of PySpark and DynamoDB. The pr
 
    - A Spark client class (`SparkClient`) with methods for initializing a Spark session, reading a DataFrame from a CSV file, and closing the Spark session.
 
-### 3. `pyspark-with-dynamo-example.py`
+### 3a. `pyspark-with-dynamo-example.py`
 
    - The main script that utilizes both DynamoDB and PySpark clients.
    - Reads data from a DynamoDB table, converts Decimal types to int for PySpark compatibility, and writes the data to a CSV file.
    - Initializes a Spark session, loads the CSV data into a PySpark DataFrame, and demonstrates various DataFrame manipulations.
    - Closes the Spark session at the end.
+
+### 3b. `pandas-with-dynamo-example.py`
+
+   - This script is (nearly) equivalent to 'pyspark-with-dynamo-example.py' except done with the Pandas library instead.
+   - There are some minor differences, for example some operations are in-place in Pandas, whereas in PySpark they are not.
 
 ### 4. `requirements.txt`
 
