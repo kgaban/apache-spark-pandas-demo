@@ -15,7 +15,8 @@ def main():
     dynamodb_client = DynamoDBClient()
 
     # Fetch the DynamoDB table and get the items
-    sample_table = dynamodb_client.fetch_table('kgaban-dynamodb-import-test')
+    dynamodb_table_name = 'kgaban-dynamodb-import-test'
+    sample_table = dynamodb_client.fetch_table(dynamodb_table_name)
     response = dynamodb_client.scan_table(sample_table)
     items = response['Items']
     converted_items = [convert_decimal(item) for item in items]

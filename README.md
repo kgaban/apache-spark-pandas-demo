@@ -26,7 +26,13 @@ This Python program demonstrates the integration of PySpark and DynamoDB. The pr
    - This script is (nearly) equivalent to 'pyspark-with-dynamo-example.py' except done with the Pandas library instead.
    - There are some minor differences, for example some operations are in-place in Pandas, whereas in PySpark they are not.
 
-### 4. `requirements.txt`
+### 4. `azure-with-raw-python.py`
+
+   - This script demonstrates connecting to an Azure Blob Storage using raw Python.
+   - The example assumes a csv file exists. This file is then read into a Pandas DataFrame.
+   - A .env file must be present to pass credentials/storage info. An example can be found within .env-example.
+
+### 5. `requirements.txt`
 
    - Lists the required Python packages and their versions for the project.
 
